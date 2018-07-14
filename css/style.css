@@ -12,41 +12,60 @@ section#score {
 }
 
 #board {
-  width: 640px;
-  height: 640px;
+  width: 480px;
+  height: 480px;
   margin: 1em auto;
+  background-color: rgba(255,255,255, 0.4);
 }
 
 #board  > div {    
-  border: 1px solid black;
+  border: 1px solid white;
   float: left;
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
 }
 
-
 section#score div {
-  width: 10em;
-  height: 3em;
-  text-align: center;
+  width: 7em;
+  height: 7em;
   padding: 0.5em;
-  background-color: rgba(211,211,211, 0.75);
-  border: 1px solid lightgray;
-  border-radius: 1px;
-  box-shadow: 1px 1px 5px 1px lightgray;
+  background-image: url("../images/score.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*background-color: rgba(211,211,211, 0.75);*/
+  /*border: 1px solid lightgray;*/
+  /*border-radius: 1px;*/
+  /*box-shadow: 1px 1px 5px 1px lightgray;*/
   margin: 1em auto;
 }
 
+section#score div strong {
+  position: relative;
+  display: block;
+  width: 50px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 2em;
+  top: 55px;
+  left: 27px;
+  color: white;
+  text-shadow: 1px 1px red;
+}
 
-
+body {
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat;
+}
 
 .furry {
-  background-image: url('../images/furry.png');
+  background-image: url('../images/dog.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .coin {
-  background-image: url('../images/coin.png');
+  background-image: url('../images/bone.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -61,6 +80,9 @@ section#over {
   padding: 10px;
   background-color: rgba(255, 255, 0, 0.75);
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4em;
+  color: white;
 }
 
 section#over pre {
@@ -76,6 +98,15 @@ section#over pre {
   display: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  text-shadow: 2px 2px grey;
+}
+
+.invisible div {
+  font-size: 0.7em;
+  font-weight: 400;
+  /*background-color: rgba(0,0,0,0.4);*/
 }
 
 .nav {

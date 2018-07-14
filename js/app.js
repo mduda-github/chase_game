@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-   // console.log("hedddeej");
-
    function Furry(x,y,direction) {
        this.x = 0;
        this.y = 0;
@@ -47,12 +45,11 @@ document.addEventListener("DOMContentLoaded", function() {
                this.showFurry();
                this.checkCoinCollision();
            }
-
        };
        this.hideVisibleFurry = function () {
            if (document.querySelector('.furry') !== null) {
                document.querySelector('.furry').classList.remove('furry');
-           };
+           }
        };
        this.turnFurry = function(event) {
            switch (event.which) {
@@ -88,6 +85,9 @@ document.addEventListener("DOMContentLoaded", function() {
                document.querySelector('#score').style.display = 'none';
                document.querySelector('.invisible').innerText = "GAME OVER";
                document.querySelector('.invisible').style.display = 'flex';
+               const finalScore = document.createElement('div');
+               document.querySelector('.invisible').appendChild(finalScore);
+               finalScore.innerText = "Your score: " + this.score;
                return true;
            }
            return false
@@ -98,21 +98,10 @@ document.addEventListener("DOMContentLoaded", function() {
        game.turnFurry(event);
    });
 
-   const a = new Coin();
-   const aa = new Furry();
-
    const game = new Game();
-
-   console.log(aa.x);
-   console.log(game);
-   game.showFurry();
-   game.showCoin();
-   game.startGame();
-   game.hideVisibleFurry();
-
-
-
-
-
+       game.showFurry();
+       game.showCoin();
+       game.startGame();
+       game.hideVisibleFurry();
 
 });
